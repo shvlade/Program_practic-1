@@ -1,0 +1,37 @@
+[
+  {
+    "id": "TRX101",
+    "amount": 8900.00,
+    "category": "Аренда",
+    "date": "2024-02-01",
+    "currency": "RUB"
+  },
+  {
+    "id": "TRX102",
+    "amount": 2100.50,
+    "category": "Коммуналка",
+    "date": "2024-02-02",
+    "currency": "RUB"
+  },
+  {
+    "id": "TRX103",
+    "amount": 3400.00,
+    "category": "Интернет",
+    "date": "2024-02-03",
+    "currency": "RUB"
+  },
+  {
+    "id": "TRX104",
+    "amount": 1200.00,
+    "category": "Книги",
+    "date": "2024-02-04",
+    "currency": "RUB"
+  },
+  {
+    "id": "TRX105",
+    "amount": 3500.00,
+    "category": "Продукты",
+    "date": "2024-02-05",
+    "currency": "RUB"
+  }
+]

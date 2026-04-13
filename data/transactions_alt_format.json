@@ -1,0 +1,25 @@
+{
+  "transactions": [
+    {
+      "id": "TRX201",
+      "amount": 15000.00,
+      "category": "Аренда",
+      "date": "2024-03-01",
+      "currency": "RUB"
+    },
+    {
+      "id": "TRX202",
+      "amount": 4500.00,
+      "category": "Коммуналка",
+      "date": "2024-03-02",
+      "currency": "RUB"
+    },
+    {
+      "id": "TRX203",
+      "amount": 2800.00,
+      "category": "Интернет",
+      "date": "2024-03-03",
+      "currency": "RUB"
+    }
+  ]
+}

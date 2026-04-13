@@ -1,0 +1,23 @@
+2026-04-13 04:44:04 - app.io.json_reader - DEBUG - Прочитано 3 транзакций из transactions_alt_format.json
+2026-04-13 04:44:04 - app.services.processor - DEBUG - Файл transactions_alt_format.json: обработано 3/3 транзакций
+2026-04-13 04:44:04 - app.io.csv_reader - ERROR - Ошибка парсинга строки 3 в файле transactions_broken.csv: Ошибка парсинга строки 3: [<class 'decimal.ConversionSyntax'>], данные: {'id': 'missing', 'amount': 'field', 'category': 'here', 'date': 'without', 'currency': 'headers'}
+2026-04-13 04:44:04 - app.services.processor - ERROR - Ошибка формата файла transactions_broken.csv: Неожиданная ошибка при чтении файла: 'NoneType' object has no attribute 'lower'
+2026-04-13 04:44:04 - app.io.csv_reader - DEBUG - Прочитано 0 транзакций из transactions_empty.csv
+2026-04-13 04:44:04 - app.services.processor - WARNING - Файл transactions_empty.csv не содержит транзакций
+2026-04-13 04:44:04 - app.io.csv_reader - ERROR - Ошибка парсинга строки 3 в файле transactions_invalid_data.csv: Ошибка парсинга строки 3: [<class 'decimal.ConversionSyntax'>], данные: {'id': 'TRX502', 'amount': 'invalid', 'category': 'Не число', 'date': '2024-06-02', 'currency': 'RUB'}
+2026-04-13 04:44:04 - app.services.processor - ERROR - Ошибка формата файла transactions_invalid_data.csv: Неожиданная ошибка при чтении файла: 'NoneType' object has no attribute 'lower'
+2026-04-13 04:44:04 - app.io.csv_reader - DEBUG - Прочитано 4 транзакций из transactions_multi_currency.csv
+2026-04-13 04:44:04 - app.services.processor - ERROR - Ошибка валют в файле transactions_multi_currency.csv: Обнаружены разные валюты в одном отчете: {'USD', 'EUR', 'RUB'}
+2026-04-13 04:44:04 - app.io.csv_reader - DEBUG - Прочитано 3 транзакций из transactions_semicolon.csv
+2026-04-13 04:44:04 - app.services.processor - DEBUG - Файл transactions_semicolon.csv: обработано 3/3 транзакций
+2026-04-13 04:44:04 - app.io.csv_reader - DEBUG - Прочитано 4 транзакций из transactions_small_amounts.csv
+2026-04-13 04:44:04 - app.services.processor - DEBUG - Файл transactions_small_amounts.csv: обработано 4/4 транзакций
+2026-04-13 04:44:04 - app.io.csv_reader - DEBUG - Прочитано 10 транзакций из transactions_valid.csv
+2026-04-13 04:44:04 - app.services.processor - DEBUG - Файл transactions_valid.csv: обработано 10/10 транзакций
+2026-04-13 04:44:04 - app.io.json_reader - DEBUG - Прочитано 5 транзакций из transactions_valid.json
+2026-04-13 04:44:04 - app.services.processor - DEBUG - Файл transactions_valid.json: обработано 5/5 транзакций
+2026-04-13 04:44:04 - app.io.csv_reader - DEBUG - Прочитано 5 транзакций из transactions_with_duplicates.csv
+2026-04-13 04:44:04 - app.services.processor - ERROR - Ошибка валидации в файле transactions_with_duplicates.csv: Дубликат ID транзакции: TRX401
+2026-04-13 04:44:04 - app.services.processor - ERROR - Ошибка валидации в файле transactions_with_duplicates.csv: Дубликат ID транзакции: TRX403
+2026-04-13 04:44:04 - app.services.processor - DEBUG - Файл transactions_with_duplicates.csv: обработано 3/5 транзакций
+2026-04-13 04:44:04 - app.services.processor - DEBUG - Результат сохранен в result.json

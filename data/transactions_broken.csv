@@ -1,0 +1,6 @@
+id,amount,category,date,currency
+TRX601,100,Канцелярия,2024-07-01,RUB
+missing,field,here,without,headers
+TRX602,200,Книги,2024-07-02,RUB
+эта,строка,имеет,неправильное,количество,полей
+TRX603,300,Офис,2024-07-03,RUB

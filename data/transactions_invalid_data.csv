@@ -1,0 +1,6 @@
+id,amount,category,date,currency
+TRX501,-500,Отрицательная сумма,2024-06-01,RUB
+TRX502,invalid,Не число,2024-06-02,RUB
+TRX503,3000,,Пустая категория,2024-06-03,RUB
+TRX504,1000,Канцелярия,invalid_date,RUB
+TRX505,2000,Офис,2024-06-05,XXX
