@@ -263,7 +263,7 @@
       "file": "transactions_multi_currency.csv",
       "line": null,
       "type": "CurrencyMismatchError",
-      "message": "Обнаружены разные валюты в одном отчете: {'USD', 'EUR', 'RUB'}",
+      "message": "Обнаружены разные валюты в одном отчете: {'RUB', 'USD', 'EUR'}",
       "raw_data": null
     },
     {

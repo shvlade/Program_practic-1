@@ -22,10 +22,6 @@ class BaseReader(ABC):
 
     @abstractmethod
     def read(self) -> List[Transaction]:
-        """
-        Прочитать файл и вернуть список транзакций
-        Должен выбрасывать DataFormatError при ошибках формата
-        """
         pass
 
     def _validate_file_exists(self) -> None:
