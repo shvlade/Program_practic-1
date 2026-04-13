@@ -28,7 +28,7 @@ class CSVReader(BaseReader):
         self._validate_file_exists()
         self._validate_file_size()
 
-        transactions = []
+        transactions: List[Transaction] = []
 
         try:
             with open(self.file_path, 'r', encoding=self.encoding) as file:
@@ -47,11 +47,8 @@ class CSVReader(BaseReader):
                     try:
                         sample = ''.join(first_lines[:2])
                         if delimiter in sample:
-                            reader = csv.reader(
-                                first_lines,
-                                delimiter=delimiter
-                            )
-                            rows = list(reader)
+                            test_reader = csv.reader(first_lines, delimiter=delimiter)
+                            rows = list(test_reader)
                             if rows and len(rows[0]) > 1:
                                 field_counts = [len(row) for row in rows]
                                 if len(set(field_counts)) == 1:
@@ -63,21 +60,21 @@ class CSVReader(BaseReader):
                 if not detected_delimiter:
                     detected_delimiter = ','
 
-                reader = csv.DictReader(file, delimiter=detected_delimiter)
+                csv_reader = csv.DictReader(file, delimiter=detected_delimiter)
 
                 required_fields = {'id', 'amount', 'category', 'date'}
-                if reader.fieldnames:
-                    fieldnames_lower = [f.lower() for f in reader.fieldnames]
+                if csv_reader.fieldnames:
+                    fieldnames_lower = [f.lower() for f in csv_reader.fieldnames]
                     if not required_fields.issubset(set(fieldnames_lower)):
                         missing = required_fields - set(fieldnames_lower)
                         raise DataFormatError(
                             f"Отсутствуют обязательные поля: {missing}. "
-                            f"Найдены: {reader.fieldnames}"
+                            f"Найдены: {csv_reader.fieldnames}"
                         )
                 else:
                     raise DataFormatError("CSV файл не содержит заголовков")
 
-                for row_num, row in enumerate(reader, start=2):
+                for row_num, row in enumerate(csv_reader, start=2):
                     try:
                         normalized_row = {k.lower(): v for k, v in row.items()}
                         transaction = self._parse_row(normalized_row, row_num)

@@ -58,7 +58,7 @@ class DataProcessor:
 
     def _get_files_to_process(self) -> List[Path]:
         """Получить список файлов для обработки"""
-        files = []
+        files: List[Path] = []
 
         for ext in READER_REGISTRY.keys():
             files.extend(self.data_dir.glob(f"*{ext}"))
